@@ -4,6 +4,7 @@ numpy
 scipy
 pandas
 tensorflow-cpu==2.15.0.post1
+tf-keras~=2.15.0
 gunicorn
 joblib
 scikit-learn
