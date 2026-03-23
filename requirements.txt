@@ -6,3 +6,4 @@ pandas
 tensorflow-cpu
 gunicorn
 joblib
+scikit-learn
