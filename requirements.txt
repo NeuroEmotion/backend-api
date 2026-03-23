@@ -7,3 +7,5 @@ tensorflow-cpu
 gunicorn
 joblib
 scikit-learn
+opencv-python-headless
+deepface
