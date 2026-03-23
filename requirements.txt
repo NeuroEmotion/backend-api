@@ -4,4 +4,4 @@ numpy
 scipy
 pandas
 tensorflow-cpu
-guicorn
+gunicorn
