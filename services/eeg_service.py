@@ -2,20 +2,20 @@ from simulation import generate_eeg
 from inference import predict_emotion_from_eeg
 
 def process_eeg(eeg_array):
-    emotion, confidence, scores = predict_emotion_from_eeg(eeg_array)
+    # inference.py returns a dict, so we access it by keys
+    res = predict_emotion_from_eeg(eeg_array)
     return {
-        "emotion": emotion,
-        "confidence": confidence,
-        "all_scores": scores
+        "emotion": res["predicted_emotion"],
+        "confidence": float(res["confidence"]),
+        "all_scores": res["all_probabilities"]
     }
-
 
 def simulate_eeg():
     eeg = generate_eeg(duration_sec=10)
-    emotion, confidence, scores = predict_emotion_from_eeg(eeg)
+    res = predict_emotion_from_eeg(eeg)
     return {
-        "emotion": emotion,
-        "confidence": confidence,
-        "all_scores": scores,
+        "predicted_emotion": res["predicted_emotion"],
+        "confidence": float(res["confidence"]),
+        "all_probabilities": res["all_probabilities"],
         "data": eeg.tolist()
     }
