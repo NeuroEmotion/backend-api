@@ -3,7 +3,7 @@ flask-cors==3.0.10
 numpy
 scipy
 pandas
-tensorflow-cpu
+tensorflow-cpu==2.15.0.post1
 gunicorn
 joblib
 scikit-learn
