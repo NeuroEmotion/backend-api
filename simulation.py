@@ -13,7 +13,7 @@ import numpy as np
 # CONFIG (Must Match Inference)
 # ==============================
 FS = 128              # Sampling frequency
-N_CHANNELS = 8       # Total EEG channels
+N_CHANNELS = 14       # Total EEG channels
 DURATION = 10         # seconds (>=5 required)
 NOISE_LEVEL = 0.3     # Background noise strength
 
